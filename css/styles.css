@@ -56,6 +56,7 @@ img {
   display: flex;
   padding-top: 16px;
   padding-bottom: 16px;
+  align-items: center;
 }
 
 .menu-open-button {
@@ -138,10 +139,6 @@ img {
   color: #404bbf;
 }
 
-.active {
-  color: #404bbf;
-  position: relative;
-}
 
 .active::after {
   content: "";
@@ -162,7 +159,7 @@ img {
   top: 0;
   left: 0;
     background-color: #ffffff;
-  padding: 24px 24px 40px 16px;
+  padding: 72px 24px 40px 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -202,9 +199,9 @@ img {
 }
 
 .mob-navigation {
-  margin-top: 24px;
-  margin-bottom: 168px;
+  margin-bottom: auto;
 }
+
 
 
 .mob-menu-item:not(:last-child) {
@@ -217,23 +214,31 @@ img {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
 }
 
-.mob-menu-link .active {
-  color: rgb(64, 75, 191);
+.color-word {
+  color: #404bbf;
 }
 
+.mobmenu-address {
+  font-style: normal;
+}
 
 .mobmenu-address-list {
   margin-bottom: 48px;
+}
+
+.mobmenu-address-item {
+  margin-bottom: 24px;
 }
 
 
 
 .mobmenu-address-link {
   color: #434455;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   padding: 24px 0;
@@ -252,7 +257,7 @@ img {
 
 .mob-icon-list {
   display: flex;
-  gap: 16px;
+  gap: 40px;
 
 }
 
@@ -282,6 +287,11 @@ img {
 
 .mob-icon-icon {
   fill: #f4f4fd;
+}
+
+.active {
+  color: #404bbf;
+  position: relative;
 }
 
 
@@ -385,6 +395,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .features-item-text {
@@ -426,7 +437,7 @@ img {
 .team-list-item {
   background-color: #ffffff;
   margin: 0 auto;
-  width: 100%;
+  width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -507,10 +518,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-list-item {
   width: 100%;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -574,6 +587,12 @@ img {
 .footer-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo-and-text {
+    margin-bottom: 72px;
+    text-align: center;
 }
 
 .footer-logo {
@@ -586,7 +605,6 @@ img {
   text-transform: uppercase;
   margin-bottom: 17px;
   display: inline-block;
-  margin-left: 86px;
 }
 
 .footer-logo-color {
@@ -599,7 +617,11 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 268px;
+  text-align: left;
+
+}
+
+.social-media {
   margin-bottom: 72px;
 }
 
@@ -609,15 +631,12 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 16px;
-  margin-left: 96px;
+  text-align: center;
 }
 
 .icon-list {
   display: flex;
   gap: 16px;
-  margin-left: 40px;
-  margin-bottom: 72px;
 }
 
 .icon-item {
@@ -648,9 +667,6 @@ img {
   fill: #f4f4fd;
 }
 
-.social-media {
-  margin-right: auto;
-}
 
 .subscribe-title {
   font-weight: 500;
@@ -720,8 +736,8 @@ img {
 
 .backdrop {
 position: absolute;
-width: 320px;
-height: 640px;
+width: 100%;
+height: 100%;
 left: 0;
 right: 0;
 top: 0;
@@ -746,10 +762,9 @@ background: rgba(46, 47, 66, 0.4);
     position: absolute;
     width: 288px;
     height: 623px;
-    left: 16px;
-    right: -16px;
-    top: 8px;
-    bottom: -8px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 4px;
     padding: 72px 16px 24px 16px;
       box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
@@ -939,6 +954,7 @@ background: rgba(46, 47, 66, 0.4);
   background-color: #404bbf;
 }
 
+
 /* ===============768===================== */
 
 @media screen and (min-width: 768px) {
@@ -984,11 +1000,15 @@ background: rgba(46, 47, 66, 0.4);
     flex-direction: column;
   }
 
+     /* ================= */
+
+
+
   /* ================ */
 
   .hero {
     padding-top: 112px;
-    padding-bottom: 204px;
+    padding-bottom: 112px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1035,6 +1055,10 @@ background: rgba(46, 47, 66, 0.4);
     width: calc((100% - 24px) / 2);
   }
 
+  .features-subtitle {
+    text-align: left;
+  }
+
   /* ================= */
 
   .portfolio-list {
@@ -1048,31 +1072,46 @@ background: rgba(46, 47, 66, 0.4);
 
   /* ================ */
 
+
   .footer-logo {
-    margin-left: 92px;
+    display: flex;
+
   }
 
+    .logo-and-text {
+      margin-right: 24px;
+
+    }
+
   .footer-text {
-    margin-left: 92px;
+    /* margin-left: 92px; */
     max-width: 264px;
   }
 
   .footer-text-soc {
-    margin-left: 24px;
+  margin-bottom: 16px;
+    text-align: left;
   }
 
   .icon-list {
-    margin-left: 24px;
-    margin-bottom: 104px;
+    /* margin-left: 24px; */
+    /* margin-bottom: 104px; */
+    text-align: left;
+  }
+
+  .footer-form {
+    gap: 24px;
+  }
+
+  .footer-subscribe {
+    margin-right: 40px;
   }
 
   .subscribe-title {
-    margin-left: 92px;
+    margin-left: 0;
   }
 
   .footer-input {
-    margin-left: 92px;
-    margin-right: 12px;
     width: 264px;
   }
 
@@ -1083,21 +1122,11 @@ background: rgba(46, 47, 66, 0.4);
 
    /* ================ */
 
-.backdrop {
-
-    width: 768px;
-    height: 1018px;
-}
 
 .modal {
 
     width: 408px;
-    height: 584px;
-    left: 180px;
-    right: -180px;
-    top: 96px;
-    bottom: -96px;
-    padding: 72px 24px 24px 24px;
+
 }
 
 .modal-btn {
@@ -1230,6 +1259,8 @@ background: rgba(46, 47, 66, 0.4);
 
   /* ================== */
 
+
+
   .footer {
     padding: 100px 0;
   }
@@ -1237,7 +1268,13 @@ background: rgba(46, 47, 66, 0.4);
   .footer-container {
     flex-wrap: nowrap;
     align-items: baseline;
+    justify-content: left;
   }
+
+  .logo-and-text {
+    margin-right: 120px;
+      
+      }
 
   .footer-logo {
     margin-left: 0;
@@ -1265,16 +1302,17 @@ background: rgba(46, 47, 66, 0.4);
 
   .social-media {
     margin-right: 0;
-    margin-left: 120px;
   }
 
   .footer-subscribe {
     width: 453px;
     margin-left: 80px;
+    margin-right: 0;
   }
 
   .footer-form {
     flex-wrap: nowrap;
+    width: 453px;
   }
 
   .footer-input {
@@ -1284,18 +1322,6 @@ background: rgba(46, 47, 66, 0.4);
 
      /* =============== */
 
-.backdrop {
-    width: 1440px;
-    height: 676px;
-    
-}
 
-.modal {
-
-    left: 516px;
-    right: -516px;
-    top: 80px;
-    bottom: -80px;
-}
 
 }
