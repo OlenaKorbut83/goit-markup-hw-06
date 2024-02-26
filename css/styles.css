@@ -772,7 +772,7 @@ background: rgba(46, 47, 66, 0.4);
 }
 
 .modal-close-btn {
-  position: absolute;
+  position: fixed;
   top: 24px;
   right: 24px;
   height: 24px;
@@ -1072,6 +1072,10 @@ background: rgba(46, 47, 66, 0.4);
 
   /* ================ */
 
+    .footer-container {
+  padding: 0 108px;
+  justify-content: flex-start;
+    }
 
   .footer-logo {
     display: flex;
@@ -1084,7 +1088,6 @@ background: rgba(46, 47, 66, 0.4);
     }
 
   .footer-text {
-    /* margin-left: 92px; */
     max-width: 264px;
   }
 
@@ -1094,8 +1097,6 @@ background: rgba(46, 47, 66, 0.4);
   }
 
   .icon-list {
-    /* margin-left: 24px; */
-    /* margin-bottom: 104px; */
     text-align: left;
   }
 
@@ -1103,9 +1104,6 @@ background: rgba(46, 47, 66, 0.4);
     gap: 24px;
   }
 
-  .footer-subscribe {
-    margin-right: 40px;
-  }
 
   .subscribe-title {
     margin-left: 0;
@@ -1138,7 +1136,7 @@ background: rgba(46, 47, 66, 0.4);
 
 @media screen and (min-width: 1158px) {
   .container {
-    width: 1128px;
+    width: 1158px;
   }
 
   .team > .container {
@@ -1255,6 +1253,7 @@ background: rgba(46, 47, 66, 0.4);
 
   .portfolio-list-item {
     width: calc((100% - 48px) / 3);
+    box-shadow: none;
   }
 
   /* ================== */
@@ -1269,10 +1268,12 @@ background: rgba(46, 47, 66, 0.4);
     flex-wrap: nowrap;
     align-items: baseline;
     justify-content: left;
+    padding: 0 15px;
   }
 
   .logo-and-text {
     margin-right: 120px;
+    margin-bottom: 0;
       
       }
 
@@ -1302,10 +1303,10 @@ background: rgba(46, 47, 66, 0.4);
 
   .social-media {
     margin-right: 0;
+    margin-bottom: 0;
   }
 
   .footer-subscribe {
-    width: 453px;
     margin-left: 80px;
     margin-right: 0;
   }
